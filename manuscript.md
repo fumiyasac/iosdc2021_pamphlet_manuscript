@@ -64,22 +64,19 @@ UI実装・画面遷移・アニメーション・操作時の手触り感に関
 
 ##### ⭐️ 事例1. 長文の中にメンション・ハッシュタグ・URLリンクが混在する様な形を実現する場合
 
-- ActiveLabel.swift
-  https://github.com/optonaut/ActiveLabel.swift
+- ActiveLabel.swift:<br>https://github.com/optonaut/ActiveLabel.swift
 
 ![libraries_example01.png](https://github.com/fumiyasac/iosdc2021_pamphlet_manuscript/blob/main/images/libraries_example01.png)
 
 ##### ⭐️ 事例2. 星形レーティングを表示を実現する場合
 
-- Cosmos
-  https://github.com/evgenyneu/Cosmos
+- Cosmos<br>https://github.com/evgenyneu/Cosmos
 
 ![libraries_example02.png](https://github.com/fumiyasac/iosdc2021_pamphlet_manuscript/blob/main/images/libraries_example02.png)
 
 ##### ⭐️ 事例3. Markdown形式のテキスト表示を利用する場合
 
-- SwiftyMarkdown
-  https://github.com/SimonFairbairn/SwiftyMarkdown
+- SwiftyMarkdown:<br>https://github.com/SimonFairbairn/SwiftyMarkdown
 
 読み物系コンテンツ等で長めの文章表示をする場合において、Markdown形式のテキストを表示をある程度のスタイルを考慮した状態でiOSアプリ上で表示する場合には、「SwiftyMarkdown」の利用を検討しても良さそうに思います。
 
@@ -89,8 +86,7 @@ https://developer.apple.com/documentation/foundation/attributedstring/3796160-in
 
 ##### ⭐️ 事例4. 注釈等の用途で利用するTooltipを実現する場合 
 
-- EasyTipView
-  https://github.com/teodorpatras/EasyTipView
+- EasyTipView:<br>https://github.com/teodorpatras/EasyTipView
 
 Webサイトで補足や注釈説明を特定のエリアに表示する際に利用されるTooltipの様な表示をiOSアプリで実現する場合には、「EasyTipView」の利用を検討しても良さそうに思います。
 
@@ -116,10 +112,8 @@ Webサイトで補足や注釈説明を特定のエリアに表示する際に�
 
 また、FlutterやReactNativeといったクロスプラットフォームを利用したアプリ開発におけるUI実装を考えていく場合においても同様に、iOS/Android間におけるUI表現に関する違いや考え方の違いと共に「ネイティブアプリらしさの実現におけるポイント」について理解をしておくことは、ネイティブアプリでの開発時と同様にとても有意義であると感じています。1つのコードベースの中でiOS/Android両方のガイドラインにできるだけ合わせながら両方のOSに対応する形でのデザインを考えていかなければならない点にその難しさがありますが、アプリの使い勝手や馴染むデザインを考えていく際には意識をしておいて決して損はないと思います。Flutterでは「Cupertino UI」が純正Widgetとして提供されていたり、ReactNativeにおいても「NativeBase」の様なライブラリがあるので、iOS/Android間におけるデザインを意識したUI実装を考える際には参考にしてみても良いかもしれません。
 
-- NativeBase (※NativeBase)
-  https://nativebase.io/
-- Cupertino Widgets (※Flutter)
-  https://flutter.dev/docs/development/ui/widgets/cupertino
+- NativeBase (※NativeBase):<br>https://nativebase.io/
+- Cupertino Widgets (※Flutter:)<br>https://flutter.dev/docs/development/ui/widgets/cupertino
 
 そして、ここからは **「AndroidではComponent内の機能として提供されている振る舞いやよく見る画面構造に類似した形を実現する」** 場合において、実現をするためのヒントとなるUI構造を考えていく際のポイントと実現するための候補になり得るライブラリの事例を簡単にご紹介します。
 
@@ -129,8 +123,7 @@ Webサイトで補足や注釈説明を特定のエリアに表示する際に�
 
 Androidで類似した表現を実現する場合には「CoodiatorLayout」を利用することで関連する各種View要素の大きさや位置の調整をする様な形になりますが、iOSではこの部分をUIScrollViewDelegateを利用してスクロールの変化量をキャッチして関連する各種View要素に変化を与える形の実装となる点が大きく異なる部分かと思います。また、サムネイル画像部分におけるパララックス（視差効果）表現部分についてはライブラリを利用したり、またはその挙動や振る舞い等を参考にしながら実装を考えていく形にしても良いかもしれません。
 
-- ParallaxHeader
-  https://github.com/romansorochak/ParallaxHeader
+- ParallaxHeader: https://github.com/romansorochak/ParallaxHeader
 
 ##### ⭐️ 事例2. タブ型の一覧表示＆スワイプをして画面を切り替える様なレイアウト例
 
@@ -138,8 +131,7 @@ Androidで類似した表現を実現する場合には「CoodiatorLayout」を�
 
 Androidで類似した表現を実現する場合には「ViewPagerとTabLayoutの組み合わせ」を利用することで図解に示した様な形を実現することができますが、iOSではUIPageViewControllerでのコンテンツ一覧表示をベースとした上で、タブ表示部分についてはUIScrollViewやUICollectionViewを利用する方針となる場合が多いかと思います。そしてタブ表示部分のデザイン的な見せ方の部分等でも工夫の余地がある一方で、自前で細かな部分までこだわったUI実装をする場合にはなかなか骨の折れる部分でもあります。現在では割とポピュラーなUI表現にもなってきていることもあり、この様な形を実現する有名なライブラリもあるので、自前での実装が難しい場合はライブラリに合わせた方針を取ることを検討をしてみるのも良さそうです。
 
-- Parchment
-  https://github.com/rechsteiner/Parchment
+- Parchment: https://github.com/rechsteiner/Parchment
 
 前述した画面レイアウトに関する例とは少し異なりますが、Androidアプリ内で良く見かけるUIコンポーネントでBottomSheetとFloatingActionButtonを例に、もしiOSで同様な表現を実装しようと考えた場合に、題意を満たす様な表現をUIライブラリを利用した実装例も簡単に紹介できればと思います。
 
@@ -147,15 +139,13 @@ Androidで類似した表現を実現する場合には「ViewPagerとTabLayout�
 
 ![android_library01.png](https://github.com/fumiyasac/iosdc2021_pamphlet_manuscript/blob/main/images/android_library01.png)
 
-- Floaty
-  https://github.com/kciter/Floaty
+- Floaty: https://github.com/kciter/Floaty
 
 ##### ⭐️ 事例4. AndroidでのBottom Sheetに相当する様な実装例
 
 ![android_library02.png](https://github.com/fumiyasac/iosdc2021_pamphlet_manuscript/blob/main/images/android_library02.png)
 
-- PanModal
-  https://github.com/slackhq/PanModal
+- PanModal: https://github.com/slackhq/PanModal
 
 私の場合は、AndroidアプリこうするけれどもiOSアプリではではどうする？(またはその逆も然り)という視点で実装のイメージやアイデアを紐解くために、
 
